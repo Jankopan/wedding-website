@@ -1,0 +1,72 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 18px;
+  border-radius: 10px;
+  border: 0.1vw solid lightpink;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 25vw;
+  font-family: Dancing Script;
+  font-size: 2vw;
+  margin: 0 auto;
+  margin-bottom: 2vw;
+  margin-top: 2vw;
+  position: relative;
+}
+
+.tile span:first-child {
+  color: #ffb3ba;
+  font-weight: bold;
+  font-size: 1.8vw;
+}
+
+.tile span:last-child {
+  font-family: Tuffy;
+  font-size: 1vw;
+  color: black;
+}
+
+.tile:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Čára začíná těsně pod dlaždicí */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.1vw; /* Tloušťka čáry */
+  height: 2vw; /* Délka čáry mezi dlaždicemi */
+  background-color: lightgrey; /* Barva čáry */
+  z-index: 0; /* Čára bude pod dlaždicemi */
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 2vw;
+}
+
+.image-container img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 5px;
+  object-fit: cover;
+}
